@@ -1,0 +1,14 @@
+﻿<Window x:Class="Bossfighter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bossfighter"
+        mc:Ignorable="d"
+        Title="Jméno hráče" Height="250" Width="300" ResizeMode="NoResize" >
+    <StackPanel>
+        <Label Content="Zadej své jméno" HorizontalAlignment="Center" Margin="0,50,0,0" FontSize="20" ></Label>
+        <TextBox x:Name="PlName" Margin="0,2,0,0" VerticalAlignment="Center" Width="150" Height="25" FontSize="20" KeyDown="btn_KeyDown"></TextBox>
+        <Button x:Name="btnStart" Click="btnStart_Click" Height="30" Width="80" Margin="0,10,0,0" Content="Start" FontSize="20" VerticalContentAlignment="Center" ></Button>
+    </StackPanel>
+</Window>
