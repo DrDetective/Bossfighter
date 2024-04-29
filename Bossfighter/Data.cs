@@ -13,5 +13,13 @@ namespace Bossfighter
         public int Damage = 10;
         public int HP_ENEMY;
         public int Damage_ENEMY;
+        public List<string> EnNames;
+        public Data()
+        {
+            EnNames.Add("Moldface");
+            EnNames.Add("Pultridpod");
+            EnNames.Add("Chaosmorph");
+            EnNames.Add("Slagfreak");
+        }
     }
 }

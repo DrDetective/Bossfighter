@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,8 +24,26 @@ namespace Bossfighter
         public Boss()
         {
             InitializeComponent();
-            //plName.Content = info.Name;
-            this.Content = plName;
+        }
+
+        private void plATT_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void plDEF_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void plHEAL_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NextBoss_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,23 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label x:Name="plName" Content=" " Foreground="White" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="400" />
+        <Label x:Name="plName" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="400" />
+        <Label x:Name="EnName" Grid.Column="1" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="400" />
+        
+        <Image Grid.Row="1" />
+        <Image Grid.Row="1" Grid.Column="1" />
+
+        <Label x:Name="plHPBar" Width="350" Grid.Row="2" Background="White" Margin="30,12,0,10" />
+        <Label Content="HP" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="2" Margin="0,0,355,0" />
+        <Label Content="Damage: " Grid.Row="3" Foreground="White" Margin="0,5,300,0" HorizontalAlignment="Left" FontSize="15" />
+        <Label x:Name="enHPBar" Width="350" Grid.Row="2" Grid.Column="1" Background="White" Margin="30,12,0,10" />
+        <Label Content="HP" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="0,0,355,0" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+            <Button x:Name="plATT" Content="⚔" FontSize="25" Width="50" Margin="0,0,10,2" Click="plATT_Click"/>
+            <Button x:Name="plDEF" Content="🛡" FontSize="25" Width="50" Margin="0,0,10,2" Click="plDEF_Click" />
+            <Button x:Name="plHEAL" Content="♥" FontSize="30" Width="50" Margin="0,0,0,2" Click="plHEAL_Click" />
+        </StackPanel>
+        <Button x:Name="NextBoss" Content="Next Round" FontSize="20" Grid.Row="3" Grid.Column="1" Margin="5" Click="NextBoss_Click" />
     </Grid>
 </Window>

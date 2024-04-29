@@ -21,6 +21,7 @@ namespace Bossfighter
     public partial class MainWindow : Window
     {
         Data info = new Data();
+        Boss bossWin = new Boss();
         public MainWindow()
         {
             InitializeComponent();
@@ -28,10 +29,12 @@ namespace Bossfighter
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            Boss bossWin = new Boss();
-            if (info.Name == "") { MessageBox.Show("Zadej svoje jméno"); }
-            else { info.Name = PlName.Text; this.Close(); bossWin.Show(); }
+            if (PlName.Text == string.Empty) { bossWin.plName.Content = "Player"; }
+            info.Name = PlName.Text;
+            this.Close();
+            bossWin.plName.Content = PlName.Text;
+            bossWin.Show();
         }
-        private void btn_KeyDown(object sender, KeyEventArgs e) { if(e.Key == Key.Enter) { btnStart_Click((object)sender, e); } }
+        private void btn_KeyDown(object sender, KeyEventArgs e) { if (e.Key == Key.Enter) { btnStart_Click((object)sender, e); } }
     }
 }
