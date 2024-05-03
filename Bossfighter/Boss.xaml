@@ -5,29 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bossfighter"
         mc:Ignorable="d"
-        Title="Boss" Height="500" Width="800" ResizeMode="NoResize" Background="Black">
+        Title="BossFighter" Height="550" Width="800" ResizeMode="NoResize" Background="Black">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="370"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label x:Name="plName" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="400" />
-        <Label x:Name="EnName" Grid.Column="1" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="400" />
-        
-        <Image Grid.Row="1" />
-        <Image Grid.Row="1" Grid.Column="1" />
+        <Label x:Name="plName" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="400" />
+        <Label x:Name="EnName" Grid.Column="1" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="400" />
 
-        <Label x:Name="plHPBar" Width="350" Grid.Row="2" Background="White" Margin="30,12,0,10" />
-        <Label Content="HP" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="2" Margin="0,0,355,0" />
-        <Label Content="Damage: " Grid.Row="3" Foreground="White" Margin="0,5,300,0" HorizontalAlignment="Left" FontSize="15" />
-        <Label x:Name="enHPBar" Width="350" Grid.Row="2" Grid.Column="1" Background="White" Margin="30,12,0,10" />
-        <Label Content="HP" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="0,0,355,0" />
+        <Label x:Name="rnDung" Grid.Column="2" HorizontalAlignment="Right" />
+        <Image Grid.Row="1" Source="imgs/knight.png" />
+        <Image x:Name="jelly" Grid.Row="1" Grid.Column="1" Source="imgs/jelly.png" />
+        <Image x:Name="svab"  Grid.Row="1" Grid.Column="1" Source="imgs/nevim.png" Visibility="Hidden" />
+        <Image x:Name="scoobs" Grid.Row="1" Grid.Column="1" Source="imgs/scoobs.png" Visibility="Hidden" FlowDirection="RightToLeft" />
+        <Image x:Name="boss"  Grid.Row="1" Grid.Column="1" Source="imgs/mindflayer.png" Visibility="Hidden" />
+
+        <Label x:Name="plHealth" Content="HP: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Grid.Row="2" Margin="10,0,0,0" />
+        <Label x:Name="plDamage" Content="DMG: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Grid.Row="2" />
+        <Label x:Name="plDefence" Content="DEF: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="20" Grid.Row="2" Margin="0,0,30,0" />
+
+        <Label x:Name="enHealth" Content="HP: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="10,0,0,0"/>
+        <Label x:Name="enDamage" Content="DMG: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Grid.Row="2" Grid.Column="1" />
+        <Label x:Name="enDefence" Content="DEF: " Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="20" Grid.Row="2" Grid.Column="1" Margin="0,0,30,0"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
             <Button x:Name="plATT" Content="⚔" FontSize="25" Width="50" Margin="0,0,10,2" Click="plATT_Click"/>

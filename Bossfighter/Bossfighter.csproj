@@ -7,4 +7,30 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="imgs\jelly.png" />
+    <None Remove="imgs\knight.png" />
+    <None Remove="imgs\mindflayer.png" />
+    <None Remove="imgs\nevim.png" />
+    <None Remove="imgs\scoobs.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="imgs\jelly.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\knight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\mindflayer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\nevim.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\scoobs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

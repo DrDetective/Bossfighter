@@ -29,10 +29,9 @@ namespace Bossfighter
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            if (PlName.Text == string.Empty) { bossWin.plName.Content = "Player"; }
-            info.Name = PlName.Text;
+            if (PlName.Text != "") { info.Name = PlName.Text; }
+            else { bossWin.plName.Content = "Player"; }
             this.Close();
-            bossWin.plName.Content = PlName.Text;
             bossWin.Show();
         }
         private void btn_KeyDown(object sender, KeyEventArgs e) { if (e.Key == Key.Enter) { btnStart_Click((object)sender, e); } }
