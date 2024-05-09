@@ -114,7 +114,7 @@ namespace Bossfighter
                         info.Damage = 25;
                         break;
                     case 4:
-                        MessageBox.Show("Dosal jsi se přes bosse a mohl jsi utéct z dungeonu");
+                        MessageBox.Show("Dostal jses přes bosse a mohl jsi utéct z dungeonu");
                         this.Close();
                         break;
                 }
