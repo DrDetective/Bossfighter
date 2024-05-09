@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -28,6 +29,7 @@ namespace Bossfighter
         {
             InitializeComponent();
             EnName.Content = info.EnNames[0];
+            plName.Content = Data.playerName;
             plHealth.Content = $"HP: {info.HP}";
             plDamage.Content = $"DMG: {info.Damage}";
             plDefence.Content = $"DEF: {info.Def}";
@@ -35,12 +37,12 @@ namespace Bossfighter
             enDamage.Content = $"DMG: {info.Damage_ENEMY}";
             enDefence.Content = $"DEF: {info.Def_Enemy}";
         }
-        private void plATT_Click(object sender, RoutedEventArgs e) //40% chance attack from enemy
+        private void plATT_Click(object sender, RoutedEventArgs e) //50% chance attack from enemy
         {
             if (info.HP_ENEMY == 0) { return; }
             else if (info.HP_ENEMY < info.Damage) { info.HP_ENEMY = 0; autoUpdate(); return; }
             int RNG = rng.Next(0, 100);
-            if (RNG >= 60)
+            if (RNG >= 50)
             {
                 info.HP -= info.Damage_ENEMY;
                 info.HP_ENEMY -= info.Damage;
@@ -49,10 +51,10 @@ namespace Bossfighter
             autoUpdate();
         }
 
-        private void plDEF_Click(object sender, RoutedEventArgs e) //60% chance of success / 40% chance of fail
+        private void plDEF_Click(object sender, RoutedEventArgs e) //80% chance of success / 20% chance of fail
         {
             int RNG = rng.Next(0, 100);
-            if (RNG >= 40)
+            if (RNG >= 20)
             {
                 info.HP += info.Heal;
             } //success + heal/parry
@@ -60,10 +62,10 @@ namespace Bossfighter
             autoUpdate();
         }
 
-        private void plHEAL_Click(object sender, RoutedEventArgs e) //70% chance of success / 30% chance of fail
+        private void plHEAL_Click(object sender, RoutedEventArgs e) //90% chance of success / 10% chance of fail
         {
             int RNG = rng.Next(0, 100);
-            if (RNG >= 30)
+            if (RNG >= 90)
             {
                 info.HP += info.Heal;
             } //success
@@ -86,7 +88,6 @@ namespace Bossfighter
                         info.HP_ENEMY = 125;
                         info.Damage_ENEMY = 15;
                         //PLayer
-                        info.HP = 110;
                         info.Damage = 15;
                         info.Heal = 15;
                         break;
@@ -96,9 +97,8 @@ namespace Bossfighter
                         EnName.Content = info.EnNames[2];
                         EnName.Foreground = new SolidColorBrush(Colors.Orange);
                         info.HP_ENEMY = 135;
-                        info.Damage_ENEMY = 19;
+                        info.Damage_ENEMY = 20;
                         //Player
-                        info.HP = 120;
                         info.Damage = 20;
                         info.Heal = 20;
                         break;
@@ -110,7 +110,6 @@ namespace Bossfighter
                         info.HP_ENEMY = 170;
                         info.Damage_ENEMY = 25;
                         //Player
-                        info.HP = 135;
                         info.Damage = 25;
                         break;
                     case 4:

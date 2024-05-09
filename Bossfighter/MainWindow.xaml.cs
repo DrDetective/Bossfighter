@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,7 @@ namespace Bossfighter
     /// </summary>
     public partial class MainWindow : Window
     {
-        Data info = new Data();
-        Boss bossWin = new Boss();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,10 +29,11 @@ namespace Bossfighter
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            if (PlName.Text != "") { info.Name = PlName.Text; }
-            else { bossWin.plName.Content = "Player"; }
-            this.Close();
+            if (PlName.Text != "") { Data.playerName = PlName.Text.ToString(); }
+            else { Data.playerName = "Player"; }
+            Boss bossWin = new Boss();
             bossWin.Show();
+            this.Close();
         }
         private void btn_KeyDown(object sender, KeyEventArgs e) { if (e.Key == Key.Enter) { btnStart_Click((object)sender, e); } }
     }

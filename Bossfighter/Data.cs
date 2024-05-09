@@ -12,7 +12,7 @@ namespace Bossfighter
     internal class Data
     {
         //Player
-        public string Name { get; set; }
+        public static string playerName { get; set; }
         public int HP = 100;
         public int Damage = 10;
         public int Def = 10;
