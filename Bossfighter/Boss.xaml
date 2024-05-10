@@ -20,7 +20,6 @@
         <Label x:Name="plName" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="400" />
         <Label x:Name="EnName" Grid.Column="1" FontSize="20" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="400" />
 
-        <Label x:Name="rnDung" Grid.Column="2" HorizontalAlignment="Right" />
         <Image Grid.Row="1" Source="imgs/knight.png" />
         <Image x:Name="jelly" Grid.Row="1" Grid.Column="1" Source="imgs/jelly.png" />
         <Image x:Name="svab"  Grid.Row="1" Grid.Column="1" Source="imgs/nevim.png" Visibility="Hidden" />

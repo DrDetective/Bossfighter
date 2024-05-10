@@ -65,7 +65,7 @@ namespace Bossfighter
         private void plHEAL_Click(object sender, RoutedEventArgs e) //90% chance of success / 10% chance of fail
         {
             int RNG = rng.Next(0, 100);
-            if (RNG >= 90)
+            if (RNG >= 10)
             {
                 info.HP += info.Heal;
             } //success
@@ -86,7 +86,7 @@ namespace Bossfighter
                         svab.Visibility = Visibility.Visible;
                         EnName.Content = info.EnNames[1];
                         info.HP_ENEMY = 125;
-                        info.Damage_ENEMY = 15;
+                        info.Damage_ENEMY = 18;
                         //PLayer
                         info.Damage = 15;
                         info.Heal = 15;
@@ -99,7 +99,7 @@ namespace Bossfighter
                         info.HP_ENEMY = 135;
                         info.Damage_ENEMY = 20;
                         //Player
-                        info.Damage = 20;
+                        info.Damage = 18;
                         info.Heal = 20;
                         break;
                     case 3:
@@ -110,12 +110,12 @@ namespace Bossfighter
                         info.HP_ENEMY = 170;
                         info.Damage_ENEMY = 25;
                         //Player
-                        info.Damage = 25;
+                        info.Damage = 21;
                         break;
                     case 4:
                         MessageBox.Show("Dostal jses přes bosse a mohl jsi utéct z dungeonu");
                         this.Close();
-                        break;
+                        return;
                 }
                 autoUpdate();
             }
